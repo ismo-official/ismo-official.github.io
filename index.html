@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ismo Pasanen Official</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="icon" href="./favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- AUDIO -->
+    <audio id="player"></audio>
+    <audio id="rewind"></audio>
+    <!-- MAIN -->
+    <main class="main">
+      <section class="left content">
+        <div class="cassette-parent">
+          <div class="cassette-content">
+            <img
+              class="cassette-image"
+              src="./assets/images/cassette.png"
+              alt="cassette"
+              draggable="false"
+            />
+          </div>
+          <img
+            id="roll_1"
+            width="53px"
+            src="./assets/images/cassette_roll.png"
+            class="rollable_1"
+            draggable="false"
+          />
+          <img
+            id="roll_2"
+            width="53px"
+            src="./assets/images/cassette_roll.png"
+            class="rollable_2"
+            draggable="false"
+          />
+        </div>
+        <!-- CONTROLS -->
+        <div class="controls-content">
+          <div class="controls">
+            <span id="backward" class="circle" onclick="backward()">
+              <i class="fa fa-step-backward"></i>
+            </span>
+            <span id="play" class="circle" onclick="play()">
+              <i class="fa fa-play"></i>
+            </span>
+            <span id="stop" class="circle" onclick="pause()">
+              <i class="fa fa-stop"></i>
+            </span>
+            <span id="forward" class="circle" onclick="forward()">
+              <i class="fa fa-step-forward"></i>
+            </span>
+          </div>
+        </div>
+      </section>
+      <!-- TRACKLIST -->
+      <section class="right content">
+        <div id="tracklist"></div>
+      </section>
+      <footer>&copy; 2024 ismo pasanen. all rights reserved.</footer>
+    </main>
+  </body>
+  <script src="./app.js"></script>
+</html>

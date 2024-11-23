@@ -1,0 +1,174 @@
+@font-face {
+  font-family: ismo;
+  src: url('./assets/fonts/Ismo-Regular.ttf');
+}
+
+:root {
+  --lightgray: rgb(200, 200, 200);
+  --gray: rgb(100, 100, 100);
+  --darkgray: rgb(70, 70, 70);
+  --pink: rgb(255, 188, 200);
+  --lightpink: rgb(248, 241, 233);
+  --white: rgb(255, 255, 255);
+}
+
+body {
+  margin: 0;
+  background: var(--pink);
+  font-family: ismo;
+  letter-spacing: 0.25mm;
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 400px;
+  height: 344px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px 0 0 5px;
+  background: var(--lightpink);
+}
+
+.right {
+  border-radius: 0 5px 5px 0;
+  background: var(--gray);
+}
+
+.cassette-image {
+  width: 100%;
+}
+
+.cassette-content {
+  padding: 10px 10px 0 10px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  color: var(--white);
+  background: var(--gray);
+}
+
+.circle:hover {
+  cursor: pointer;
+  background: var(--darkgray);
+}
+
+.controls-content {
+  flex: 1;
+  padding: 0 20px 0 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.active {
+  background: var(--darkgray);
+}
+
+#tracklist {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  color: var(--white);
+}
+
+.title {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 0 10px;
+}
+
+.title:hover,
+.playing {
+  color: var(--lightgray);
+}
+
+.cassette-parent {
+  position: relative;
+}
+
+.rollable_1 {
+  position: absolute;
+  top: 91.5px;
+  left: 96px;
+}
+
+.rollable_2 {
+  position: absolute;
+  top: 91.5px;
+  left: 251.5px;
+}
+
+footer {
+  font-family: monospace;
+  position: absolute;
+  bottom: 0;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .right {
+    margin-bottom: 10px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .controls-content {
+    margin-bottom: 7px;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 350px;
+  }
+
+  .rollable_1 {
+    width: 46px;
+    top: 80.5px;
+    left: 85px;
+  }
+
+  .rollable_2 {
+    width: 46px;
+    top: 80.5px;
+    left: 220px;
+  }
+}
